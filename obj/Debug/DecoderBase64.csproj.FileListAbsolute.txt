@@ -1,0 +1,7 @@
+C:\Users\mark\source\repos\DecoderBase64\DecoderBase64\bin\Debug\DecoderBase64.exe.config
+C:\Users\mark\source\repos\DecoderBase64\DecoderBase64\bin\Debug\DecoderBase64.exe
+C:\Users\mark\source\repos\DecoderBase64\DecoderBase64\bin\Debug\DecoderBase64.pdb
+C:\Users\mark\source\repos\DecoderBase64\DecoderBase64\obj\Debug\DecoderBase64.csprojAssemblyReference.cache
+C:\Users\mark\source\repos\DecoderBase64\DecoderBase64\obj\Debug\DecoderBase64.csproj.CoreCompileInputs.cache
+C:\Users\mark\source\repos\DecoderBase64\DecoderBase64\obj\Debug\DecoderBase64.exe
+C:\Users\mark\source\repos\DecoderBase64\DecoderBase64\obj\Debug\DecoderBase64.pdb

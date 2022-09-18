@@ -23,13 +23,14 @@ namespace DecoderBase64
                 for (int i = 0; i < files.Length; i++)
                 {                    
                     XmlDocument xml = new XmlDocument(); // xml документ для чтения
-                    xml.Load($@"{path}\{files[i]}");
-                    XmlNodeList nodeList = xml.GetElementsByTagName("message");
-                    message += nodeList[i].InnerText;
-                    Console.WriteLine(nodeList[i].InnerText);                  
+                    xml.Load($@"{files[i]}");
+                    XmlNode node = xml.SelectSingleNode("message");
+                    message += node.InnerText + "\n";
+                    Console.WriteLine(node.InnerText);
+                    rawBase64 = message;
+                    Decode(rawBase64);
                 }
-                rawBase64 = message;
-                Decode(rawBase64);
+                
             }
             // Раскодируем base64
             void Decode(string file) 
@@ -42,13 +43,14 @@ namespace DecoderBase64
             void WriteToFile(string data) 
             {
                 string nameFile = "DecodedText.xml";
-                using (StreamWriter writer = new StreamWriter(data, true, Encoding.Default))
+                using (StreamWriter writer = new StreamWriter(nameFile, true, Encoding.Default))
                 {
-                    writer.WriteLine(data);
-                    Console.WriteLine("Файл сохранен");
+                    writer.WriteLine(data +"\n");
+                    Console.WriteLine("Строка записана");
                 }
             }
-            
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            GetFilesToDecode();
             Console.ReadLine();
         }
     }
